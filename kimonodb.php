@@ -1,9 +1,9 @@
 <?php
     error_reporting(0);
-    $k=$_POST["kakaku"];//並べ替え順の受け取り
-    $db=mysqli_connect("localhost","root","","kimonodb");//①データベースへ接続(自身のサーバにあるdbに)
-    $sql="select * from kimonolist order by price ".$k;//②実行するsql文の作成
-    $kekka=mysqli_query($db,$sql);//③sql文の実行
+    $k=$_POST["kakaku"];
+    $db=mysqli_connect("localhost","root","","kimonodb");
+    $sql="select * from kimonolist order by price ".$k;
+    $kekka=mysqli_query($db,$sql);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
